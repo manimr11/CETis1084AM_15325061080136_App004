@@ -43,5 +43,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LatLng sydney = new LatLng(25.5777234,-108.4762999);
         mMap.addMarker(new MarkerOptions().position(sydney).title("15325061080136_Manuel Machado"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+
     }
 }
