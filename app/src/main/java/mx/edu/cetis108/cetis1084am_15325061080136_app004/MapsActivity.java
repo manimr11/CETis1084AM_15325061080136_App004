@@ -81,11 +81,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.animateCamera(miUbicacion);
     }
 
+    private Ubicacion uCoordenadas;
+    private Alumno uAlumno= new Alumno();
+
+
     public void actualizarUbicacion(Location location) {
         if (location != null) {
             lat = location.getLatitude();
             lng = location.getLongitude();
             agregarMarcador(lat, lng);
+
+            uCoordenadas = new Ubicacion( "hhtp://innersoft.dnsalias.com/moviles/4AMPR/15325061080136/insertar_ubicacion.php", lat, lng, uAlumno);
+            uCoordenadas.Nueva();
         }
     }
 
